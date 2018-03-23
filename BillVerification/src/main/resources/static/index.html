@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-ng-app = "ibvsApp">
+
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js"></script>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src ="js/app.js"></script>
+
+</head>
+
+<body>
+    <div data-ng-controller="HomeController">
+    	<h2>Interconnect Billing Verification</h2>
+		<h3>{{ headingTitle }}</h3>
+		    <button data-ng-click = "addUser()">Add New Task</button>
+		    
+    		<!-- <section layout="column" layout-align="center center">
+	  			<md-button class="groupX top" data-ng-click="addUser()">Create User</md-button>
+	  			<md-button class="groupX middle">Create Operator</md-button>
+	  			<md-button class="groupX middle">Verify Voice Data</md-button>
+	  			<md-button class="groupX middle">Verify SMS Data</md-button>
+	  			<md-button class="groupX bottom">View Documents</md-button>
+			</section> -->
+			
+			<a href="#UserCreate" class="groupX top">Create User</a>
+			<a href="#Operator" class="groupX top">Create Operator</a>
+			<a href="#UserCreate" class="groupX top">Verify Voice Data</a>
+			<a href="#UserCreate" class="groupX top">Verify SMS Data</a>
+			<a href="#UserCreate" class="groupX top">View Documents</a>
+			<div data-ng-view></div>
+    </div>
+    
+</body>
+
+</html> 

@@ -1,0 +1,56 @@
+<h1>Create Operator</h1>
+<div data-ng-controller="NewOperatorController">
+    <form name="form" data-ng-submit="addNewOperator()" role="form" novalidate>
+    
+        <div class="form-group" data-ng-class="{ 'has-error': form.name.$dirty && form.name.$error.required }">
+            <label for="name"> Operator Name :</label>
+            <input type="text" name="name" id="name" class="w3-input w3-border" placeholder="Operator Name" data-ng-model="name" required >
+            <span data-ng-show="form.name.$dirty && form.name.$error.required" class="help-block">Operator name is required</span>
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.code.$dirty && form.code.$error.required }">
+            <label for="code">Operator Code :</label>
+            <input type="text" name="code" id="code" class="w3-input w3-border" placeholder="Operator code" data-ng-model="code" required />
+            <span data-ng-show="form.code.$dirty && form.code.$error.required" class="help-block">Operator code is required</span>
+        </div>
+        
+        <label >Operator Address :</label>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.no.$dirty && form.no.$error.required }">
+            <label for="no">NO :</label>
+            <input type="text" name="no" id="no" class="w3-input w3-border" placeholder="Number" data-ng-model="no" required />
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.street.$dirty && form.street.$error.required }">
+            <label for="street">Street :</label>
+            <input type="text" name="Street" id="Street" class="w3-input w3-border" placeholder="Street" data-ng-model="street" required />
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.city.$dirty && form.city.$error.required }">
+            <label for="city">City :</label>
+            <input type="text" name="city" id="city" class="w3-input w3-border" placeholder="City" data-ng-model="city" required />
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.designation.$dirty && form.designation.$error.required }">
+            <label for="Designation">Country :</label>
+            <input type="text" name="Street" id="Street" class="w3-input w3-border" placeholder="Street" data-ng-model="street" required />
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="lastName">Operator Dispute percentage :</label>
+            <input type="number" name="lastName" id="Text1" class="w3-input w3-border" placeholder="Last Name" data-ng-model="lastName" required />
+            <span data-ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+        </div>
+        
+        <div class="form-group" data-ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="lastName">Operator Cost :</label>
+            <input type="number" name="lastName" id="Text1" class="w3-input w3-border" placeholder="Last Name" data-ng-model="lastName" required />
+            <span data-ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+        </div>
+        
+        <div class="form-actions">
+            <input type="submit"  data-ng-disabled="form.$invalid || vm.dataLoading" value="&#10004; Save" class="w3-btn w3-green w3-ripple"/>  
+        </div>
+
+    </form>
+    </div>
